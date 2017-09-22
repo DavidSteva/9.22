@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script language="JavaScript">
+    function GetLocalIPAddr(){
+        var oSetting = null; var ip = null;
+        try{
+            oSetting = new ActiveXObject("rcbdyctl.Setting");
+            ip = oSetting.GetIPAddress;
+    if (ip.length == 0){
+        return "没有连接到Internet";
+        console.log('没有连接到网')
+    }
+        oSetting = null;
+        }catch(e){
+            return ip;
+        }
+        return ip; }
+    document.write(GetLocalIPAddr()+"<br/>")
+</script>
+</body>
+</html>
